@@ -1,10 +1,24 @@
+import Link from "next/link";
+import Login from './login';
+
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <h1>
-          Login Page
-        </h1>
+    <main className="">
+      <div className="">
+        <div>
+          <Link href={"."}>
+            Back
+          </Link>
+        </div>
+        <div>
+          <h1>
+            Login Page
+          </h1>
+        </div>
+        <div>
+          <Login />
+        </div>
       </div>
     </main>
   )

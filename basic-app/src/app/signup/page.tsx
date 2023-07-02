@@ -1,18 +1,36 @@
+"client";
+
+import Link from "next/link";
+
 export default function Home() {
+
+  const handleSignup = () => {
+    console.log("");
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+    <main className="">
+      <div className="">
+        <div>
+          <Link href={"."}>
+            Back
+          </Link>
+        </div>
         <div>
           <h1>
             SignUp Page
           </h1>
         </div>
-        <input />
-        <input />
-        <button>
-          login
-        </button>
         <div>
+          <div>
+            <input placeholder="Name" />
+            <input placeholder="Surname" />
+            <input placeholder="Email" />
+            <input placeholder="Password" />
+          </div>
+          <button onClick={handleSignup}>
+            login
+          </button>
         </div>
       </div>
     </main>
