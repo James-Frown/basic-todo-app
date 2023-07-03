@@ -2,16 +2,16 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-100vw h-100vh items-center justify-between p-24">
-      <div className="p-top-10vh z-10 w-100vw items-center justify-center font-mono text-sm lg:flex">
+    <main className="">
+      <div className="">
         <div>
           <h1>
             Landing Page
           </h1>
         </div>
       </div>
-      <div className="p-top-10vh z-10 w-100vw items-center justify-center font-mono text-sm lg:flex">
-        <div className="flex justify-between">
+      <div className="">
+        <div className="">
           <Link href={"/login"}>
             Login
           </Link>

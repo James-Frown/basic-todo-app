@@ -1,7 +1,23 @@
+"use client"
+
 import Link from "next/link";
-import Login from './login';
+
+import { useState } from "react";
+
+import { auth } from '../../config/firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth'
 
 export default function Home() {
+
+  const [email, setEmail] = useState("");
+
+  const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    setEmail("");
+    setPassword("");
+    console.log("Email: " + email + " Password: " + password);
+  };
 
   return (
     <main className="">
@@ -17,7 +33,15 @@ export default function Home() {
           </h1>
         </div>
         <div>
-          <Login />
+          <div>
+            <input id="E" placeholder="Email" onChange={(e) => {
+              setEmail(e);
+            }}/>
+            <input id="P" placeholder="Password" />
+          </div>
+          <button onClick={handleLogin}>
+            Login
+          </button>
         </div>
       </div>
     </main>
