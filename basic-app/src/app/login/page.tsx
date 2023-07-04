@@ -3,14 +3,11 @@
 import Link from "next/link";
 
 import { useState } from "react";
-import { useRouter } from "next/router";
 
-import { auth } from '../../config/firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth, googleProvider } from '../../config/firebase';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 
-export default function Home() {
-
-  const router = useRouter();
+export default function Login() {
 
   const [email, setEmail] = useState("");
 
@@ -18,23 +15,35 @@ export default function Home() {
 
   const [helper, setHelper] = useState("");
 
-  const [page, setPage] = useState("");
-
   const handleHelper = () => {
     return helper;
   };
 
   const handleRoute = () => {
-    router.push(page);
+    console.log("user redirected");
+  };
+
+  const handleGoogle = async () => {
+    try {
+      console.log("attempted signup");
+      await signInWithPopup(auth, googleProvider);
+      console.log("add new user to users collection!");
+      console.log("User googlesignup Success");
+      handleRoute();
+    } catch (err) {
+      setHelper("Opps, there was an issue!");
+      console.log(err);
+      console.log("User signup Failed");
+    }
   };
 
   const handleLogin = async () => {
     console.log("Email: " + email + " Password: " + password);
     try {
       if (email !== null && password.length > 5) {
+        console.log("attempted login");
         await signInWithEmailAndPassword(auth, email, password);
         console.log("User Login Success");
-        setPage("/dashboard");
         handleRoute();
       } else {
         if (email === "") {
@@ -50,7 +59,7 @@ export default function Home() {
         }
       }
     } catch (err) {
-      setHelper("Wrong Email or Password!");
+      setHelper("Invalid Email or Password!");
       console.log(err);
       console.log("User Login Failed");
     }
@@ -94,7 +103,12 @@ export default function Home() {
             Login
           </button>
         </div>
+        <div>
+          <button onClick={handleGoogle}>
+            SignUp with google
+          </button>
+        </div>
       </div>
     </main>
   )
-}
+};
