@@ -1,11 +1,11 @@
-import Dashboard from "../components/dashboard/dashboard";
+import Settings from "../components/settings/settings";
 
-export default function dashboard() {
+export default function settings() {
     return (
         <main className="">
             <div className="">
                 <div>
-                    <Dashboard />
+                    <Settings />
                 </div>
             </div>
         </main>
