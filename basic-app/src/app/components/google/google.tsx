@@ -1,12 +1,18 @@
 "use client"
 
 import { auth, googleProvider } from "@/config/firebase";
+
 import { signInWithPopup } from 'firebase/auth';
 
+import { useRouter } from 'next/navigation';
+
 export default function Login() {
+    
+    const { push } = useRouter();
 
     const handleRoute = () => {
         console.log("user redirected");
+        push("/dashboard");
     };
 
     const handleGoogle = async () => {
