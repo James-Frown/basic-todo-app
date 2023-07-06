@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import GoogleLogin from "./components/google/google";
+
 export default function Home() {
   return (
     <main className="">
@@ -12,12 +14,20 @@ export default function Home() {
       </div>
       <div className="">
         <div className="">
-          <Link href={"/login"}>
-            Login
-          </Link>
-          <Link href={"/signup"}>
-            Signup
-          </Link>
+
+          <div>
+            <Link href={"/login"}>
+              Login
+            </Link>
+          </div>
+          <div>
+            <Link href={"/signup"}>
+              Signup
+            </Link>
+          </div>
+          <div>
+            <GoogleLogin />
+          </div>
         </div>
       </div>
     </main>

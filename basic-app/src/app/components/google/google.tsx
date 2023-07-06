@@ -6,7 +6,7 @@ import { signInWithPopup } from 'firebase/auth';
 
 import { useRouter } from 'next/navigation';
 
-export default function Login() {
+export default function GoogleLogin() {
     
     const { push } = useRouter();
 
