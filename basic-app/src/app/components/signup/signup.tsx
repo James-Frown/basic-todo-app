@@ -79,7 +79,8 @@ export default function Signup() {
                     Name: name,
                     surnamen: surname,
                     Email: email,
-                    UID: auth.currentUser.uid
+                    UID: auth.currentUser.uid,
+                    TotalPoints: 0
                 });
             } catch (err) {
                 console.log(err);
