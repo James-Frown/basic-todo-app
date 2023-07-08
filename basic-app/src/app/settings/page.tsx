@@ -1,3 +1,4 @@
+import SecureSettings from "@/routes/secureSettings";
 import Settings from "../components/settings/settings";
 
 export default function settings() {
@@ -5,7 +6,7 @@ export default function settings() {
         <main className="">
             <div className="">
                 <div>
-                    <Settings />
+                    <SecureSettings />
                 </div>
             </div>
         </main>

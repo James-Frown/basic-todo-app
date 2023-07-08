@@ -1,11 +1,11 @@
-import Dashboard from "../components/dashboard/dashboard";
+import SecureDashboard from "@/routes/secureDashboard";
 
 export default function dashboard() {
     return (
         <main className="">
             <div className="">
                 <div>
-                    <Dashboard />
+                    <SecureDashboard />
                 </div>
             </div>
         </main>
