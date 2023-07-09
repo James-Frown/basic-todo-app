@@ -9,7 +9,10 @@ export default function NotFound() {
                         Opps,
                     </h1>
                     <p>
-                        The page you were looking for dosnt exist!
+                        There was an error!
+                    </p>
+                    <p>
+                        Your page was not found!
                     </p>
                 </div>
                 <div>

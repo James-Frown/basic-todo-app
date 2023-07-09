@@ -1,3 +1,5 @@
+"use client"
+
 import { useRouter } from 'next/navigation';
 import { auth } from '../config/firebase';
 import Dashboard from '@/app/components/dashboard/dashboard';
@@ -7,7 +9,7 @@ export default function SecureDashboard() {
     const { push } = useRouter();
 
     let Token = { 'token': false };
-    
+
     try {
         if (auth.currentUser) {
             console.log("User has a Token");
@@ -26,7 +28,9 @@ export default function SecureDashboard() {
         console.log("Here is the error: " + err);
     }
 
-    return (
-        Token.token ? <Dashboard /> : push("/error")
-    );
+    if (Token.token) {
+        return <Dashboard />
+    } else {
+        push("/login")
+    }
 };

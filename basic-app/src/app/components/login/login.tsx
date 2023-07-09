@@ -61,21 +61,22 @@ export default function Login() {
         <main className="">
             <div className="">
                 <div>
-                    <Link href={"."}>
+                    <Link href={"."} className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center ">
                         Back
                     </Link>
                 </div>
-                <div>
+                <div className="text-black p-4 m-4 flex justify-center content-center text-center text-xl font-black">
                     <h1>
                         Login Page
                     </h1>
                 </div>
                 <div>
-                    <div>
+                    <div className="text-black p-4 m-4 flex justify-center content-center text-center text-m font-meduim">
                         {handleHelper()}
                     </div>
                     <div>
                         <input
+                            className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center "
                             required
                             placeholder="Email..."
                             type="email"
@@ -83,6 +84,7 @@ export default function Login() {
                                 (e) => setEmail(e.target.value)
                             } />
                         <input
+                            className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center "
                             required
                             minLength={6}
                             placeholder="Password..."
@@ -91,9 +93,13 @@ export default function Login() {
                                 (e) => setPassword(e.target.value)
                             } />
                     </div>
-                    <button onClick={handleLogin}>
-                        Login
-                    </button>
+                    <div>
+                        <button
+                            onClick={handleLogin}
+                            className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center ">
+                            Login
+                        </button>
+                    </div>
                 </div>
             </div>
         </main>

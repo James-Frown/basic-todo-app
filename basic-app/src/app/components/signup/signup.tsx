@@ -114,31 +114,34 @@ export default function Signup() {
         <main className="">
             <div className="">
                 <div>
-                    <Link href={"."}>
+                    <Link href={"."} className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center ">
                         Back
                     </Link>
                 </div>
-                <div>
+                <div className="text-black p-4 m-4 flex justify-center content-center text-center text-xl font-black">
                     <h1>
                         SignUp Page
                     </h1>
                 </div>
-                <div>
+                <div className="text-black p-4 m-4 flex justify-center content-center text-center text-m font-meduim">
                     {handleHelper()}
                 </div>
                 <div>
                     <div>
                         <input
+                            className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center "
                             placeholder="Name"
                             onChange={
                                 (e) => setName(e.target.value)
                             } />
                         <input
+                            className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center "
                             placeholder="Surname"
                             onChange={
                                 (e) => setSurname(e.target.value)
                             } />
                         <input
+                            className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center "
                             required
                             placeholder="Email..."
                             type="email"
@@ -146,6 +149,7 @@ export default function Signup() {
                                 (e) => setEmail(e.target.value)
                             } />
                         <input
+                            className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center "
                             required
                             minLength={6}
                             placeholder="Password..."
@@ -154,7 +158,9 @@ export default function Signup() {
                                 (e) => setPassword(e.target.value)
                             } />
                     </div>
-                    <button onClick={handleSignup}>
+                    <button
+                        onClick={handleSignup}
+                        className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center ">
                         SignUp
                     </button>
                 </div>

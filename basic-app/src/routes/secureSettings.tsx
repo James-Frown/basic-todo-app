@@ -1,5 +1,6 @@
-import { useRouter } from 'next/navigation';
+"use client"
 
+import { useRouter } from 'next/navigation';
 import { auth } from '../config/firebase';
 import Settings from '@/app/components/settings/settings';
 
@@ -27,7 +28,9 @@ export default function SecureSettings() {
         console.log("Here is the error: " + err);
     }
 
-    return (
-        Token.token ? <Settings /> : push("/error")
-    );
+    if (Token.token) {
+        return <Settings />
+    } else {
+        push("/login")
+    };
 };

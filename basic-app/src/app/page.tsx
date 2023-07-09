@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="">
       <div className="">
-        <div>
+      <div className="text-black p-4 m-4 flex justify-center content-center text-center text-xl font-black">
           <h1>
             Landing Page
           </h1>
@@ -16,16 +16,16 @@ export default function Home() {
         <div className="">
 
           <div>
-            <Link href={"/login"}>
+            <Link href={"/login"} className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center ">
               Login
             </Link>
           </div>
-          <div>
-            <Link href={"/signup"}>
+          <div >
+            <Link href={"/signup"} className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center ">
               Signup
             </Link>
           </div>
-          <div>
+          <div className="text-white bg-black rounded p-4 m-4 flex justify-center content-center text-center ">
             <GoogleLogin />
           </div>
         </div>

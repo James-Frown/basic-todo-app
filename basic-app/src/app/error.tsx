@@ -13,7 +13,7 @@ export default function Error({ error, reset }: ErrorPageProps) {
             <div>
                 <div>
                     <h1>
-                        Error
+                        Error,
                     </h1>
                     <p>
                         Something Went Wrong...

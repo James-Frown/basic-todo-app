@@ -1,4 +1,4 @@
-"client";
+"use client"
 
 import Link from "next/link";
 import Logout from "../logout/logout";
@@ -8,7 +8,7 @@ export default function Settings() {
         <main className="">
             <div className="">
                 <div>
-                    <Link href={"."}>
+                    <Link href={"/dashboard"}>
                         Back
                     </Link>
                 </div>
