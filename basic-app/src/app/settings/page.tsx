@@ -1,12 +1,11 @@
-import Settings from "../components/settings/settings";
-
+import SecureSettings from "@/routes/secureSettings";
 
 export default function settings() {
     return (
         <main className="">
             <div className="">
                 <div>
-                    <Settings />
+                    <SecureSettings />
                 </div>
             </div>
         </main>
