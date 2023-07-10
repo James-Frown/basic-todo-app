@@ -33,4 +33,9 @@ export default function SecureDashboard() {
     } else {
         push("/login")
     }
+
+    return (
+        <>
+        </>
+    );
 };

@@ -26,7 +26,7 @@ export default function Signup() {
 
     const usersCollectionRef = collection(db, "users");
 
-    const todosCollectionRef = collection(db, "toodos");
+    const todosCollectionRef = collection(db, "todos");
 
     const { push } = useRouter();
 
@@ -77,7 +77,7 @@ export default function Signup() {
             try {
                 await addDoc(usersCollectionRef, {
                     Name: name,
-                    surnamen: surname,
+                    Surname: surname,
                     Email: email,
                     UID: auth.currentUser.uid,
                     TotalPoints: 0

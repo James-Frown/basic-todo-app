@@ -33,4 +33,9 @@ export default function SecureSettings() {
     } else {
         push("/login")
     };
+
+    return (
+        <>
+        </>
+    );
 };

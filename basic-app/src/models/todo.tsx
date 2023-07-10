@@ -1,11 +1,12 @@
-export interface chorwiseTodo {
-    title: string,
-    description: string,
-    uid: string,
-    points: number,
-    status: boolean
+export interface Todo {
+    Title: string,
+    Description: string,
+    UID: string,
+    Points: number,
+    Status: boolean,
+    id: string
 }
 
-export interface chorwiseTodoResponse {
-    results: chorwiseTodo[],
+export interface TodoResponse {
+    results: Todo[],
 }
